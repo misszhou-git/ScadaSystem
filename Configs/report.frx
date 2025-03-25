@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="06/20/2009 22:40:42" ReportInfo.Modified="12/27/2024 22:15:13" ReportInfo.CreatorVersion="2024.2.15.0">
+  <Dictionary>
+    <CsvDataConnection Name="Connection" ConnectionString="rijcmlqUudWs/dQSVFzxfh83pcmruye+R4jsImFFWJjshV9X1gl3tlpx0d7BUy0+2yLdLVLol/jBkY7BBI2r1H1DAuNcsrlyapVX92W7rz4SCnAUT8mXya97jfj69FdGm+SWUNtLxD15kUqjW6puqfjbMSINnrkUI+yKp0wuQdvQljzllE9ddOvQnBmc6gaA3nrygNDr2FKTt8LQuHsY94f0mynEJoxue9yrl47fEsFAo6HA/RL8oBkytUwXd4hH3MKj5Hk3lCpkGn5WyEqCIXnzghqhk8Pt0oaPcNOZzx9/K0iv6ytdcyy0KVQd6Yiz5mlOvJV">
+      <TableDataSource Name="ScadaReadDataList" Alias="ScadaReadData" DataType="System.Int32" Enabled="true" TableName="ScadaReadDataList">
+        <Column Name="Id" DataType="System.Int32"/>
+        <Column Name="CreateTime" DataType="System.DateTime"/>
+        <Column Name="UpdateTime" DataType="System.DateTime"/>
+        <Column Name="DegreasingSprayPumpPressure" DataType="System.Double"/>
+        <Column Name="DegreasingPhValue" DataType="System.Double"/>
+        <Column Name="RoughWashSprayPumpPressure" DataType="System.Double"/>
+        <Column Name="PhosphatingSprayPumpPressure" DataType="System.Double"/>
+        <Column Name="PhosphatingPhValue" DataType="System.Double"/>
+        <Column Name="FineWashSprayPumpPressure" DataType="System.Double"/>
+        <Column Name="MoistureFurnaceTemperature" DataType="System.Int32"/>
+        <Column Name="CuringFurnaceTemperature" DataType="System.Double"/>
+        <Column Name="FactoryTemperature" DataType="System.Double"/>
+        <Column Name="FactoryHumidity" DataType="System.Double"/>
+        <Column Name="ProductionCount" DataType="System.Double"/>
+        <Column Name="DefectiveCount" DataType="System.Double"/>
+        <Column Name="ProductionPace" DataType="System.Double"/>
+        <Column Name="AccumulatedAlarms" DataType="System.Double"/>
+      </TableDataSource>
+    </CsvDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="宋体, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="Text5" Width="718.2" Height="28.35" Text="喷涂工艺SCADA核心数据" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="40.09" Width="718.2" Height="28.35">
+      <TextObject Name="Text2" Width="94.5" Height="18.9" Text="ID" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text4" Left="103.95" Width="94.5" Height="18.9" Text="脱脂Ph值" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text7" Left="198.45" Width="103.95" Height="18.9" Text="陶化压力值" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text9" Left="302.4" Width="103.95" Height="18.9" Text="陶化pH值" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text11" Left="406.35" Width="103.95" Height="18.9" Text="粗洗压力值" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text13" Left="510.3" Width="103.95" Height="18.9" Text="精洗压力值" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text15" Left="614.25" Width="103.95" Height="18.9" Text="水分炉温度" Font="Arial, 10pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="70.72" Width="718.2" Height="18.9" DataSource="ScadaReadDataList">
+      <TextObject Name="Text1" Width="94.5" Height="18.9" Text="[ScadaReadData.Id]" Font="Arial, 10pt" Style="Data"/>
+      <TextObject Name="Text3" Left="103.95" Width="94.5" Height="18.9" Text="[ScadaReadData.DegreasingPhValue]" Format="Number" Format.UseLocale="true" Format.DecimalDigits="2" Font="Arial, 10pt" Style="Data"/>
+      <TextObject Name="Text6" Left="194.5" Width="103.95" Height="18.9" Text="[ScadaReadData.RoughWashSprayPumpPressure]" Format="Number" Format.UseLocale="true" Format.DecimalDigits="3" Font="Arial, 10pt" Style="Data"/>
+      <TextObject Name="Text10" Left="302.4" Width="103.95" Height="18.9" Text="[ScadaReadData.PhosphatingSprayPumpPressure]" Font="Arial, 10pt" Style="Data"/>
+      <TextObject Name="Text12" Left="406.35" Width="103.95" Height="18.9" Text="[ScadaReadData.PhosphatingPhValue]" Font="Arial, 10pt" Style="Data"/>
+      <TextObject Name="Text14" Left="510.3" Width="103.95" Height="18.9" Text="[ScadaReadData.PhosphatingPhValue]" Font="Arial, 10pt" Style="Data"/>
+      <TextObject Name="Text16" Left="614.25" Width="103.95" Height="18.9" Text="[ScadaReadData.FineWashSprayPumpPressure]" Font="Arial, 10pt" Style="Data"/>
+    </DataBand>
+  </ReportPage>
+</Report>

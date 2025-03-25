@@ -1,0 +1,140 @@
+﻿<UserControl x:Class="TulingScadaSystem.Views.DataQueryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:local="clr-namespace:TulingScadaSystem.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ucs="clr-namespace:TulingScadaSystem.Ucs"
+             xmlns:vm="clr-namespace:TulingScadaSystem.ViewModels"
+             d:DataContext="{d:DesignInstance vm:DataQueryViewModel}"
+             d:DesignHeight="800"
+             d:DesignWidth="1200"
+             Background="{DynamicResource MaterialDesign.Brush.Background}"
+             FontFamily="Microsoft YaHei"
+             FontSize="16"
+             TextElement.FontSize="16"
+             TextElement.FontWeight="Regular"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             mc:Ignorable="d">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+
+    <UserControl.Resources>
+        <!--  自定义样式  -->
+        <Style x:Key="LeftAlignedHeaderStyle" TargetType="GridViewColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Margin" Value="10,0,0,0" />
+            <!--  添加一些内边距以美化  -->
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="12*" />
+            <RowDefinition Height="0.8*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="5" Content="开始日期:" />
+                <DatePicker Width="120"
+                            Margin="5"
+                            materialDesign:HintAssist.Hint="StartDate"
+                            SelectedDate="{Binding StartTime, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+
+                <Button Width="120"
+                        Height="35"
+                        Margin="20,5,5,5"
+                        Command="{Binding ResetCommand}"
+                        Content="重置查询"
+                        Style="{DynamicResource TulingButtonStyle}" />
+                <Button Width="120"
+                        Height="35"
+                        Margin="10,5,5,5"
+                        Command="{Binding SearchCommand}"
+                        Content="查询数据"
+                        Style="{DynamicResource TulingButtonStyle}" />
+                <Button Width="120"
+                        Height="35"
+                        Margin="10,5,5,5"
+                        Command="{Binding OutPageCommand}"
+                        Content="导出分页"
+                        Style="{DynamicResource TulingButtonStyle}" />
+                <Button Width="120"
+                        Height="35"
+                        Margin="10,5,5,5"
+                        Command="{Binding OutAllCommand}"
+                        Content="导出全部"
+                        Style="{DynamicResource TulingButtonStyle}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Margin="5" Content="结束日期:" />
+                <DatePicker Width="120"
+                            Margin="5"
+                            materialDesign:HintAssist.Hint="EndDate"
+                            SelectedDate="{Binding EndTime, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+                <Button Width="120"
+                        Height="35"
+                        Margin="20,5,5,5"
+                        Command="{Binding DesignReportCommand}"
+                        Content="报表设计"
+                        Style="{DynamicResource TulingButtonStyle}" />
+                <Button Width="120"
+                        Height="35"
+                        Margin="10,5,5,5"
+                        Command="{Binding PreviewReportCommand}"
+                        Content="报表预览"
+                        Style="{DynamicResource TulingButtonStyle}" />
+                <Button Width="120"
+                        Height="35"
+                        Margin="10,5,5,5"
+                        Command="{Binding OutputReportCommand}"
+                        Content="报表导出"
+                        Style="{DynamicResource TulingButtonStyle}" />
+                <Button Width="120"
+                        Height="35"
+                        Margin="10,5,5,5"
+                        Command="{Binding PutDataCommand}"
+                        Content="推送数据"
+                        Style="{DynamicResource TulingButtonStyle}" />
+            </StackPanel>
+        </StackPanel>
+
+        <ListView Grid.Row="1"
+                  HorizontalAlignment="Stretch"
+                  ItemsSource="{Binding ScadaReadDataList}">
+            <ListView.View>
+                <GridView ColumnHeaderContainerStyle="{StaticResource LeftAlignedHeaderStyle}">
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="序号" />
+                    <GridViewColumn DisplayMemberBinding="{Binding DegreasingSprayPumpPressure}" Header="脱脂压力值" />
+                    <GridViewColumn DisplayMemberBinding="{Binding DegreasingPhValue}" Header="脱脂pH值" />
+                    <GridViewColumn DisplayMemberBinding="{Binding RoughWashSprayPumpPressure}" Header="粗洗压力值" />
+                    <GridViewColumn DisplayMemberBinding="{Binding PhosphatingSprayPumpPressure}" Header="陶化压力值" />
+                    <GridViewColumn DisplayMemberBinding="{Binding PhosphatingPhValue}" Header="陶化pH值" />
+                    <GridViewColumn DisplayMemberBinding="{Binding MoistureFurnaceTemperature}" Header="水分炉温度" />
+                    <GridViewColumn DisplayMemberBinding="{Binding CuringFurnaceTemperature}" Header="固化炉温度" />
+                    <GridViewColumn DisplayMemberBinding="{Binding FactoryTemperature}" Header="厂内温度" />
+                    <GridViewColumn DisplayMemberBinding="{Binding FactoryHumidity}" Header="厂内湿度" />
+                    <GridViewColumn DisplayMemberBinding="{Binding CreateTime}" Header="创建时间" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <!--  分页控件  -->
+        <ucs:PaginationControl Grid.Row="2"
+                               CurrentPage="{Binding CurrentPage, Mode=TwoWay}"
+                               GoToFirstPageCommand="{Binding GoToFirstPageCommand}"
+                               GoToLastPageCommand="{Binding GoToLastPageCommand}"
+                               GoToNextPageCommand="{Binding GoToNextPageCommand}"
+                               GoToPreviousPageCommand="{Binding GoToPreviousPageCommand}"
+                               TotalPages="{Binding TotalPages, Mode=TwoWay}" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,10 @@
+2025-01-06 12:49:21.5309|ERROR|TulingScadaSystem.Helpers.GlobalConfig|The CancellationTokenSource has been disposed. 
+2025-01-06 12:49:28.5517|ERROR|TulingScadaSystem.Helpers.GlobalConfig|A task was canceled. 
+2025-01-06 12:49:45.6447|ERROR|TulingScadaSystem.Helpers.GlobalConfig|The CancellationTokenSource has been disposed. 
+2025-01-06 12:49:45.6698|ERROR|TulingScadaSystem.Helpers.GlobalConfig|The CancellationTokenSource has been disposed. 
+2025-01-06 12:50:26.5831|ERROR|TulingScadaSystem.Helpers.GlobalConfig|数据读取失败 
+2025-01-06 12:50:27.1032|ERROR|TulingScadaSystem.Helpers.GlobalConfig|PLC 连接失败:127.0.0.1:102 
+2025-01-06 12:50:31.6645|ERROR|TulingScadaSystem.Helpers.GlobalConfig|数据读取失败 
+2025-01-06 12:50:50.8716|ERROR|TulingScadaSystem.Helpers.GlobalConfig|A task was canceled. 
+2025-01-06 12:51:01.5598|ERROR|TulingScadaSystem.Helpers.GlobalConfig|The CancellationTokenSource has been disposed. 
+2025-01-06 12:51:01.5875|ERROR|TulingScadaSystem.Helpers.GlobalConfig|The CancellationTokenSource has been disposed. 

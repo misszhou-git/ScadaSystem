@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="TulingScadaSystem.Views.UserOperateView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:helpers="clr-namespace:TulingScadaSystem.Helpers"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:local="clr-namespace:TulingScadaSystem.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TulingScadaSystem.ViewModels"
+             d:DesignHeight="300"
+             d:DesignWidth="400"
+             Background="{DynamicResource MaterialDesign.Brush.Background}"
+             FontFamily="Microsoft YaHei"
+             FontSize="16"
+             TextElement.FontSize="16"
+             TextElement.FontWeight="Regular"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             mc:Ignorable="d">
+    <Grid>
+        <StackPanel>
+            <TextBlock Margin="8"
+                       HorizontalAlignment="Center"
+                       FontSize="24"
+                       Text="用户信息" />
+            <TextBox Width="300"
+                     Margin="8"
+                     materialDesign:HintAssist.Hint="用户名"
+                     Text="{Binding Entity.UserName, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Width="300"
+                     Margin="8"
+                     materialDesign:HintAssist.Hint="密码"
+                     Text="{Binding Entity.Password, UpdateSourceTrigger=PropertyChanged}" />
+            <TextBox Width="300"
+                     Margin="8"
+                     materialDesign:HintAssist.Hint="角色"
+                     Text="{Binding Entity.Role, UpdateSourceTrigger=PropertyChanged}" />
+            <StackPanel Width="300"
+                        Margin="0,8,0,20"
+                        Orientation="Horizontal">
+                <Button Width="120"
+                        Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                        CommandParameter="{x:Static helpers:Constant.TRUE}"
+                        Content="确定"
+                        Style="{StaticResource MaterialDesignOutlinedButton}" />
+                <Rectangle Width="60" />
+                <Button Width="120"
+                        Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+                        CommandParameter="{x:Static helpers:Constant.FALSE}"
+                        Content="取消"
+                        Style="{StaticResource MaterialDesignOutlinedButton}" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+
+</UserControl>

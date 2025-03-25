@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Ucs\Dialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ucs\PaginationControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Ucs\StatusIndicatorControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ChartView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DataQueryView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DeviceView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\FlowView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\FormulaView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\IndexView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LoginView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\LogView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MainView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ParamsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ShellView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserOperateView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Styles\TulingBtn.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\TulingTextBlock.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ucs\Dialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ucs\PaginationControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Ucs\StatusIndicatorControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ChartView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DataQueryView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\DeviceView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\FlowView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\FormulaView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\IndexView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\LogView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ParamsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ShellView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserOperateView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

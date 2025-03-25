@@ -1,0 +1,3 @@
+2025-01-12 16:02:10.1888|ERROR|TulingScadaSystem.Helpers.GlobalConfig|数据读取失败 
+2025-01-12 16:02:15.3009|ERROR|TulingScadaSystem.Helpers.GlobalConfig|数据读取失败 
+2025-01-12 16:02:15.3009|ERROR|TulingScadaSystem.Helpers.GlobalConfig|PLC 连接失败:127.0.0.1:102 

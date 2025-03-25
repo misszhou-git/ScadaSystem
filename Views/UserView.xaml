@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="TulingScadaSystem.Views.UserView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:local="clr-namespace:TulingScadaSystem.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TulingScadaSystem.ViewModels"
+             d:DataContext="{d:DesignInstance vm:UserViewModel}"
+             d:DesignHeight="800"
+             d:DesignWidth="1200"
+             Background="{DynamicResource MaterialDesign.Brush.Background}"
+             FontFamily="Microsoft YaHei"
+             FontSize="16"
+             TextElement.FontSize="16"
+             TextElement.FontWeight="Regular"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             mc:Ignorable="d">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <Button Width="100"
+                    Margin="0,0,15,0"
+                    Command="{Binding SearchCommand}"
+                    Content="查询用户"
+                    Style="{StaticResource TulingButtonStyle}" />
+            <Button Width="100"
+                    Command="{Binding AddCommand}"
+                    Content="添加用户"
+                    Style="{StaticResource TulingButtonStyle}" />
+        </StackPanel>
+
+        <ListView Grid.Row="1" ItemsSource="{Binding UserList}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="序号" />
+                    <GridViewColumn DisplayMemberBinding="{Binding UserName}" Header="用户名" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Role}" Header="角色" />
+                    <GridViewColumn DisplayMemberBinding="{Binding CreateTime}" Header="创建时间" />
+                    <GridViewColumn DisplayMemberBinding="{Binding UpdateTime}" Header="更新时间" />
+                    <GridViewColumn Header="操作">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Style="{StaticResource TulingTextBlock}" Text="删除">
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="PreviewMouseUp">
+                                                <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.DeleteCommand}" CommandParameter="{Binding}" />
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </TextBlock>
+                                    <Rectangle Width="10" />
+                                    <TextBlock Style="{StaticResource TulingTextBlock}" Text="修改">
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="PreviewMouseUp">
+                                                <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.EditCommand}" CommandParameter="{Binding}" />
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

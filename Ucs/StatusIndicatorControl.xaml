@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="TulingScadaSystem.Ucs.StatusIndicatorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:local="clr-namespace:TulingScadaSystem.Ucs"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:TulingScadaSystem.ViewModels"
+             Background="Transparent"
+             FontFamily="Microsoft YaHei"
+             FontSize="16"
+             TextElement.FontSize="16"
+             TextElement.FontWeight="Regular"
+             TextElement.Foreground="White"
+             mc:Ignorable="d">
+    <StackPanel Margin="0,0,0,5" Orientation="Horizontal">
+        <Button Width="30"
+                Height="30"
+                Margin="5,5,8,0"
+                materialDesign:ButtonProgressAssist.IsIndeterminate="{Binding IsIndeterminate, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                materialDesign:ButtonProgressAssist.Value="-1"
+                Background="{Binding ButtonBackground, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                Content="{materialDesign:PackIcon DotsHorizontal}"
+                Style="{StaticResource MaterialDesignFloatingActionButton}" />
+
+        <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Text="{Binding StatusText, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+    </StackPanel>
+</UserControl>
