@@ -7763,11 +7763,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BaiduNetdiskDownload\\TulingScadaSystem\\TulingScadaSystem.csproj",
+      "projectUniqueName": "D:\\3.WPF\\ScadaSystem\\TulingScadaSystem.csproj",
       "projectName": "TulingScadaSystem",
-      "projectPath": "D:\\BaiduNetdiskDownload\\TulingScadaSystem\\TulingScadaSystem.csproj",
+      "projectPath": "D:\\3.WPF\\ScadaSystem\\TulingScadaSystem.csproj",
       "packagesPath": "C:\\Users\\lusujin\\.nuget\\packages\\",
-      "outputPath": "D:\\BaiduNetdiskDownload\\TulingScadaSystem\\obj\\",
+      "outputPath": "D:\\3.WPF\\ScadaSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

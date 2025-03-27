@@ -8,7 +8,7 @@ namespace TulingScadaSystem.Services;
 
 public class UserSession:ObservableObject
 {
-    private User _user = new User() { UserName = "test", Password = "test" };
+    private User _user = new User() { UserName = "admin", Password = "123456" };
 
     public User CurrentUser
     {

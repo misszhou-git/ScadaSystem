@@ -25,15 +25,15 @@ namespace TulingScadaSystem.ViewModels
             if (true)
             {
                 // 建库
-                SqlSugarHelper.Db.DbMaintenance.CreateDatabase();
+                //SqlSugarHelper.Db.DbMaintenance.CreateDatabase();
                 // 建表
-                SqlSugarHelper.Db.CodeFirst.InitTables<User>();
-                SqlSugarHelper.Db.CodeFirst.InitTables<Menu>();
-                SqlSugarHelper.Db.CodeFirst.InitTables<ScadaReadData>();
+                //SqlSugarHelper.Db.CodeFirst.InitTables<User>();
+                //SqlSugarHelper.Db.CodeFirst.InitTables<Menu>();
+                //SqlSugarHelper.Db.CodeFirst.InitTables<ScadaReadData>();
                 SqlSugarHelper.Db.CodeFirst.InitTables<FormulaEntity>();
             }
 
-            if (true)
+            if (false)
             {
                 var menuList = new List<Menu>();
                 menuList.Add(new Menu()
@@ -50,13 +50,13 @@ namespace TulingScadaSystem.ViewModels
                     View = "DeviceView",
                     Sort = 2,
                 });
-                menuList.Add(new Menu()
-                {
-                    MenuName = "配方管理",
-                    Icon = "AirFilter",
-                    View = "FormulaView",
-                    Sort = 3,
-                });
+                //menuList.Add(new Menu()
+                //{
+                //    MenuName = "配方管理",
+                //    Icon = "AirFilter",
+                //    View = "FormulaView",
+                //    Sort = 3,
+                //});
                 menuList.Add(new Menu()
                 {
                     MenuName = "参数管理",
@@ -71,20 +71,20 @@ namespace TulingScadaSystem.ViewModels
                     View = "DataQueryView",
                     Sort = 5,
                 });
-                menuList.Add(new Menu()
-                {
-                    MenuName = "数据趋势",
-                    Icon = "ChartFinance",
-                    View = "ChartView",
-                    Sort = 6,
-                });
-                menuList.Add(new Menu()
-                {
-                    MenuName = "报表管理",
-                    Icon = "FileReport",
-                    View = "ReportView",
-                    Sort = 7,
-                });
+                //menuList.Add(new Menu()
+                //{
+                //    MenuName = "数据趋势",
+                //    Icon = "ChartFinance",
+                //    View = "ChartView",
+                //    Sort = 6,
+                //});
+                //menuList.Add(new Menu()
+                //{
+                //    MenuName = "报表管理",
+                //    Icon = "FileReport",
+                //    View = "ReportView",
+                //    Sort = 7,
+                //});
                 menuList.Add(new Menu()
                 {
                     MenuName = "日志管理",
@@ -104,15 +104,15 @@ namespace TulingScadaSystem.ViewModels
             }
 
 
-            if (true)
+            if (false)
             {
-                // 插入一些用户表里面的数据 root test test123
+                // 插入一些用户表里面的数据 admin test test123
 
                 var userList = new List<User>();
                 userList.Add(new User
                 {
-                    UserName = "root",
-                    Password = "root",
+                    UserName = "admin",
+                    Password = "admin",
                     Role = 0
                 });
                 userList.Add(new User
@@ -134,7 +134,7 @@ namespace TulingScadaSystem.ViewModels
 
             if (true)
             {
-                // 插入一些用户表里面的数据 root test test123
+                // 插入一些用户表里面的数据 admin test test123
 
                 var scadaReadDatalist = new List<ScadaReadData>();
 
@@ -169,7 +169,7 @@ namespace TulingScadaSystem.ViewModels
 
             if (true)
             {
-                // 插入一些用户表里面的数据 root test test123
+                // 插入一些采集表里面的数据 admin test test123
                 var formulaEntityList = new List<FormulaEntity>();
 
                 for (int i = 0; i < 10; i++)

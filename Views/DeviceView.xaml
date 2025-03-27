@@ -44,7 +44,7 @@
                         Command="{Binding WriteDeviceControlCommand}"
                         CommandParameter="TotalStart"
                         Content="总启动"
-                        FontSize="40" />
+                        FontSize="40" Click="Button_Click" />
                 <Button Width="200"
                         Height="100"
                         Margin="10"

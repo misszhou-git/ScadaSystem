@@ -33,8 +33,7 @@
           "FastReport.VSDesign": "2024.2.15.0",
           "Microsoft.Web.WebView2.Core": "1.0.2903.40",
           "Microsoft.Web.WebView2.WinForms": "1.0.2903.40",
-          "Microsoft.Web.WebView2.Wpf": "1.0.2903.40",
-          "TulingLicense.Library": "1.0.0.0"
+          "Microsoft.Web.WebView2.Wpf": "1.0.2903.40"
         },
         "runtime": {
           "TulingScadaSystem.dll": {}
@@ -2015,14 +2014,6 @@
             "fileVersion": "1.0.2903.40"
           }
         }
-      },
-      "TulingLicense.Library/1.0.0.0": {
-        "runtime": {
-          "TulingLicense.Library.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
       }
     }
   },
@@ -3164,11 +3155,6 @@
       "sha512": ""
     },
     "Microsoft.Web.WebView2.Wpf/1.0.2903.40": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "TulingLicense.Library/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

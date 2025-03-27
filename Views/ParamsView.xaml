@@ -129,12 +129,12 @@
                 BorderBrush="#546e7a"
                 BorderThickness="1">
             <StackPanel>
-                <Button Content="保存系统参数" Style="{DynamicResource TulingButtonStyle}" />
+                <Button Content="压力参数" Style="{DynamicResource TulingButtonStyle}" />
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Margin="10" Orientation="Horizontal">
                         <Label Width="80"
                                Margin="5"
-                               Content="软件授权：" />
+                               Content="当前压力：" />
                         <TextBox Width="420"
                                  Margin="5"
                                  Text="{Binding RootParamProp.SystemParam.AuthCode}"
@@ -145,15 +145,34 @@
                     <StackPanel Margin="10" Orientation="Horizontal">
                         <Label Width="80"
                                Margin="5"
-                               Content="自动清除：" />
+                               Content="5Mpa：" />
                         <ToggleButton Width="80"
                                       Margin="5"
                                       IsChecked="{Binding RootParamProp.SystemParam.AutoClearLog, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                       Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
                                       ToolTip="自动采集开关" />
                     </StackPanel>
-                    <Rectangle Width="70" />
                     <StackPanel Margin="10" Orientation="Horizontal">
+                        <Label Width="80"
+                            Margin="5"
+                                Content="10Mpa：" />
+                        <ToggleButton Width="80"
+                  Margin="5"
+                  IsChecked="{Binding RootParamProp.SystemParam.AutoClearLog, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                  Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
+                  ToolTip="自动采集开关" />
+                    </StackPanel>
+                    <StackPanel Margin="10" Orientation="Horizontal">
+                        <Label Width="80"
+           Margin="5"
+           Content="15Mpa：" />
+                        <ToggleButton Width="80"
+                  Margin="5"
+                  IsChecked="{Binding RootParamProp.SystemParam.AutoClearLog, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                  Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
+                  ToolTip="自动采集开关" />
+                    </StackPanel>
+                    <!--<StackPanel Margin="10" Orientation="Horizontal">
                         <Label Width="80"
                                Margin="5"
                                Content="清除天数：" />
@@ -161,7 +180,7 @@
                                  Margin="5"
                                  Text="{Binding RootParamProp.SystemParam.AutoClearDay}"
                                  TextAlignment="Center" />
-                    </StackPanel>
+                    </StackPanel>-->
                 </StackPanel>
             </StackPanel>
         </Border>

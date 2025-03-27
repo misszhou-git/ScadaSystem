@@ -10,7 +10,7 @@ using TulingScadaSystem.Helpers;
 using TulingScadaSystem.Models;
 using TulingScadaSystem.Services;
 using TulingScadaSystem.Views;
-using XyLicense.Library;
+//using XyLicense.Library;
 using LogLevel = Microsoft.Extensions.Logging.LogLevel;
 
 namespace TulingScadaSystem
@@ -36,15 +36,15 @@ namespace TulingScadaSystem
         {
             base.OnStartup(e);
 
-            var result = LicenceHelper.ValidLicense();
+            //var result = LicenceHelper.ValidLicense();
 
-            if (!result)
-            {
-                var mac = ComputerHelper.GetComputerDetail();
-                MessageBox.Show($"License 授权失败，请联系管理员！{mac}");
+            //if (!result)
+            //{
+            //    var mac = ComputerHelper.GetComputerDetail();
+            //    MessageBox.Show($"License 授权失败，请联系管理员！{mac}");
 
-                return;
-            }
+            //    return;
+            //}
 
             // 切换主题，变为 AliceBlue
             ThemeManager.Current.ChangeTheme(this, ThemeManager.Current.AddTheme(

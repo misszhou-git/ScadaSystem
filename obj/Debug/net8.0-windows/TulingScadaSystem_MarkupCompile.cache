@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\BaiduNetdiskDownload\TulingScadaSystem\obj\Debug\net8.0-windows\
+D:\3.WPF\ScadaSystem\obj\Debug\net8.0-windows\
 TulingScadaSystem
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\BaiduNetdiskDownload\TulingScadaSystem\App.xaml
+D:\3.WPF\ScadaSystem\App.xaml
 18-1367579360
 31706736156
 481469705836
-312846125129
+3111129965407
 Styles\TulingBtn.xaml;Styles\TulingTextBlock.xaml;Ucs\Dialog.xaml;Ucs\PaginationControl.xaml;Ucs\StatusIndicatorControl.xaml;Views\ChartView.xaml;Views\DataQueryView.xaml;Views\DeviceView.xaml;Views\FlowView.xaml;Views\FormulaView.xaml;Views\IndexView.xaml;Views\LoginView.xaml;Views\LogView.xaml;Views\MainView.xaml;Views\ParamsView.xaml;Views\ShellView.xaml;Views\UserOperateView.xaml;Views\UserView.xaml;
 
 False

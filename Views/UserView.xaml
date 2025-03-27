@@ -33,11 +33,6 @@
                     VerticalAlignment="Center"
                     Orientation="Horizontal">
             <Button Width="100"
-                    Margin="0,0,15,0"
-                    Command="{Binding SearchCommand}"
-                    Content="查询用户"
-                    Style="{StaticResource TulingButtonStyle}" />
-            <Button Width="100"
                     Command="{Binding AddCommand}"
                     Content="添加用户"
                     Style="{StaticResource TulingButtonStyle}" />

@@ -1,7 +1,7 @@
 ﻿namespace TulingScadaSystem.Models;
 
 /// <summary>
-/// TulingRead.xlsx 表结构
+/// Read.xlsx 表结构
 /// </summary>
 public class ReadEntity
 {

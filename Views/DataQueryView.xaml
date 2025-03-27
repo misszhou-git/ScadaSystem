@@ -40,7 +40,6 @@
             <RowDefinition Height="12*" />
             <RowDefinition Height="0.8*" />
         </Grid.RowDefinitions>
-
         <StackPanel Grid.Row="0">
             <StackPanel Orientation="Horizontal">
                 <Label Margin="5" Content="开始日期:" />
@@ -49,19 +48,26 @@
                             materialDesign:HintAssist.Hint="StartDate"
                             SelectedDate="{Binding StartTime, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                             Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+                <Label Margin="5" Content="结束日期:" />
+                <DatePicker Width="120"
+            Margin="5"
+            materialDesign:HintAssist.Hint="EndDate"
+            SelectedDate="{Binding EndTime, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
+                <Button Width="120"
+        Height="35"
+        Margin="10,5,5,5"
+        Command="{Binding SearchCommand}"
+        Content="查询数据"
+        Style="{DynamicResource TulingButtonStyle}" />
                 <Button Width="120"
                         Height="35"
                         Margin="20,5,5,5"
                         Command="{Binding ResetCommand}"
                         Content="重置查询"
                         Style="{DynamicResource TulingButtonStyle}" />
-                <Button Width="120"
-                        Height="35"
-                        Margin="10,5,5,5"
-                        Command="{Binding SearchCommand}"
-                        Content="查询数据"
-                        Style="{DynamicResource TulingButtonStyle}" />
+                
                 <Button Width="120"
                         Height="35"
                         Margin="10,5,5,5"
@@ -75,38 +81,7 @@
                         Content="导出全部"
                         Style="{DynamicResource TulingButtonStyle}" />
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Margin="5" Content="结束日期:" />
-                <DatePicker Width="120"
-                            Margin="5"
-                            materialDesign:HintAssist.Hint="EndDate"
-                            SelectedDate="{Binding EndTime, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                            Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
-                <Button Width="120"
-                        Height="35"
-                        Margin="20,5,5,5"
-                        Command="{Binding DesignReportCommand}"
-                        Content="报表设计"
-                        Style="{DynamicResource TulingButtonStyle}" />
-                <Button Width="120"
-                        Height="35"
-                        Margin="10,5,5,5"
-                        Command="{Binding PreviewReportCommand}"
-                        Content="报表预览"
-                        Style="{DynamicResource TulingButtonStyle}" />
-                <Button Width="120"
-                        Height="35"
-                        Margin="10,5,5,5"
-                        Command="{Binding OutputReportCommand}"
-                        Content="报表导出"
-                        Style="{DynamicResource TulingButtonStyle}" />
-                <Button Width="120"
-                        Height="35"
-                        Margin="10,5,5,5"
-                        Command="{Binding PutDataCommand}"
-                        Content="推送数据"
-                        Style="{DynamicResource TulingButtonStyle}" />
-            </StackPanel>
+           
         </StackPanel>
 
         <ListView Grid.Row="1"

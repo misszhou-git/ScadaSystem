@@ -90,7 +90,7 @@
                             Background="#cfd8dc"
                             Orientation="Horizontal">
                     <StatusBarItem Margin="0,0,5,0"
-                                   Content="[Spray Process SCADA System--Tuling]"
+                                   Content="[Spray Process SCADA System]"
                                    Foreground="Gray" />
                     <StatusBarItem Margin="0,0,5,0"
                                    Content="当前用户"

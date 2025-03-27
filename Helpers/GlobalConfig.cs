@@ -34,7 +34,7 @@ public class GlobalConfig:IDisposable
     private ConcurrentQueue<ScadaReadData> _scadaReadDataQueue = new();
 
     public GlobalConfig(IOptionsSnapshot<RootParam> options, ILogger<GlobalConfig> logger)
-    {
+     {
         _options = options;
         _logger = logger;
         InitPlc();
@@ -75,8 +75,8 @@ public class GlobalConfig:IDisposable
     private void InitExcelsAddress()
     {
         var rootPath = AppDomain.CurrentDomain.BaseDirectory + "Configs\\";
-        var readPath = rootPath + "TulingRead.xlsx";
-        var writePath = rootPath + "TulingWrite.xlsx";
+        var readPath = rootPath + "Read.xlsx";
+        var writePath = rootPath + "Write.xlsx";
 
         if (!File.Exists(readPath)||!File.Exists(writePath)) {
             _logger.LogError($"找不到读/写配置文件 xlsx{readPath}\n{writePath}");

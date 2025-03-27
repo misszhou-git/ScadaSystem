@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s22+u9nAbRI=",
+  "dgSpecHash": "57aLOuOqpHg=",
   "success": true,
-  "projectFilePath": "D:\\BaiduNetdiskDownload\\TulingScadaSystem\\TulingScadaSystem.csproj",
+  "projectFilePath": "D:\\3.WPF\\ScadaSystem\\TulingScadaSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lusujin\\.nuget\\packages\\anglesharp\\1.1.2\\anglesharp.1.1.2.nupkg.sha512",
     "C:\\Users\\lusujin\\.nuget\\packages\\anglesharp.css\\1.0.0-beta.139\\anglesharp.css.1.0.0-beta.139.nupkg.sha512",
