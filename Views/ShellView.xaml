@@ -7,7 +7,7 @@
                  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                  xmlns:vm="clr-namespace:TulingScadaSystem.ViewModels"
-                 Title="图灵SCADA喷涂工艺"
+                 Title="SCADA轴向柱塞泵故障诊断"
                  Width="800"
                  Height="500"
                  d:DataContext="{d:DesignInstance vm:ShellViewModel}"

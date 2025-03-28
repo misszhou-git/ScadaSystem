@@ -22,7 +22,7 @@ namespace TulingScadaSystem.ViewModels
         private void InitData()
         {
            
-            if (true)
+            if (false)
             {
                 // 建库
                 //SqlSugarHelper.Db.DbMaintenance.CreateDatabase();
@@ -30,7 +30,7 @@ namespace TulingScadaSystem.ViewModels
                 //SqlSugarHelper.Db.CodeFirst.InitTables<User>();
                 //SqlSugarHelper.Db.CodeFirst.InitTables<Menu>();
                 //SqlSugarHelper.Db.CodeFirst.InitTables<ScadaReadData>();
-                SqlSugarHelper.Db.CodeFirst.InitTables<FormulaEntity>();
+                //SqlSugarHelper.Db.CodeFirst.InitTables<FormulaEntity>();
             }
 
             if (false)
@@ -57,13 +57,13 @@ namespace TulingScadaSystem.ViewModels
                 //    View = "FormulaView",
                 //    Sort = 3,
                 //});
-                menuList.Add(new Menu()
-                {
-                    MenuName = "参数管理",
-                    Icon = "AlphabetCBoxOutline",
-                    View = "ParamsView",
-                    Sort = 4,
-                });
+                //menuList.Add(new Menu()
+                //{
+                //    MenuName = "参数管理",
+                //    Icon = "AlphabetCBoxOutline",
+                //    View = "ParamsView",
+                //    Sort = 4,
+                //});
                 menuList.Add(new Menu()
                 {
                     MenuName = "数据查询",
@@ -132,9 +132,9 @@ namespace TulingScadaSystem.ViewModels
             }
 
 
-            if (true)
+            if (false)
             {
-                // 插入一些用户表里面的数据 admin test test123
+                // 插入采集到的实时数据
 
                 var scadaReadDatalist = new List<ScadaReadData>();
 
@@ -167,9 +167,9 @@ namespace TulingScadaSystem.ViewModels
                 SqlSugarHelper.Db.Insertable(scadaReadDatalist).ExecuteCommand();
             }
 
-            if (true)
+            if (false)
             {
-                // 插入一些采集表里面的数据 admin test test123
+                // 插入配方
                 var formulaEntityList = new List<FormulaEntity>();
 
                 for (int i = 0; i < 10; i++)

@@ -37,18 +37,16 @@
                 <Button Width="200"
                         Height="100"
                         Margin="10"
-                        materialDesign:ButtonProgressAssist.IsIndeterminate="True"
                         materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                         materialDesign:ButtonProgressAssist.Value="-1"
                         Background="LimeGreen"
                         Command="{Binding WriteDeviceControlCommand}"
                         CommandParameter="TotalStart"
                         Content="总启动"
-                        FontSize="40" Click="Button_Click" />
+                        FontSize="40"  />
                 <Button Width="200"
                         Height="100"
                         Margin="10"
-                        materialDesign:ButtonProgressAssist.IsIndeterminate="True"
                         materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                         materialDesign:ButtonProgressAssist.Value="-1"
                         Background="Red"
@@ -59,7 +57,6 @@
                 <Button Width="200"
                         Height="100"
                         Margin="10"
-                        materialDesign:ButtonProgressAssist.IsIndeterminate="True"
                         materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                         materialDesign:ButtonProgressAssist.Value="-1"
                         Background="#50a0ff"
@@ -70,7 +67,6 @@
                 <Button Width="200"
                         Height="100"
                         Margin="10"
-                        materialDesign:ButtonProgressAssist.IsIndeterminate="True"
                         materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                         materialDesign:ButtonProgressAssist.Value="-1"
                         Background="#febf57"
@@ -81,7 +77,6 @@
                 <Button Width="200"
                         Height="100"
                         Margin="10"
-                        materialDesign:ButtonProgressAssist.IsIndeterminate="True"
                         materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                         materialDesign:ButtonProgressAssist.Value="-1"
                         Background="#414141"
@@ -95,154 +90,7 @@
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
-                <ColumnDefinition />
             </Grid.ColumnDefinitions>
-
-            <Border Grid.Column="0"
-                    BorderBrush="#50a0ff"
-                    BorderThickness="1">
-                <UniformGrid Columns="2" Rows="4">
-                    <StackPanel Margin="5"
-                                HorizontalAlignment="Center"
-                                Orientation="Horizontal">
-                        <TextBlock Margin="10"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   FontSize="30"
-                                   Foreground="#1b2755"
-                                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                                   Text="脱脂工位" />
-                        <ToggleButton Width="100"
-                                      Height="40"
-                                      IsChecked="{Binding ScadaReadDataProp.DegreasingStationOpen}"
-                                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
-                                      ToolTip="MaterialDesignSwitchLightToggleButton">
-                            <i:Interaction.Triggers>
-                                <i:EventTrigger EventName="Checked">
-                                    <i:InvokeCommandAction Command="{Binding ToggleCollectionCommand}" CommandParameter="DegreasingStationOpen" />
-                                </i:EventTrigger>
-                                <i:EventTrigger EventName="Unchecked">
-                                    <i:InvokeCommandAction Command="{Binding ToggleCollectionCommand}" CommandParameter="DegreasingStationOpen" />
-                                </i:EventTrigger>
-                            </i:Interaction.Triggers>
-                        </ToggleButton>
-
-                    </StackPanel>
-                    <StackPanel Margin="5"
-                                HorizontalAlignment="Center"
-                                Orientation="Horizontal">
-                        <TextBlock Margin="10"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   FontSize="30"
-                                   Foreground="#1b2755"
-                                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                                   Text="水分炉工位" />
-                        <ToggleButton Width="100"
-                                      Height="40"
-                                      IsChecked="False"
-                                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
-                                      ToolTip="MaterialDesignSwitchLightToggleButton" />
-                    </StackPanel>
-                    <StackPanel Margin="5"
-                                HorizontalAlignment="Center"
-                                Orientation="Horizontal">
-                        <TextBlock Margin="10"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   FontSize="30"
-                                   Foreground="#1b2755"
-                                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                                   Text="粗洗工位" />
-                        <ToggleButton Width="100"
-                                      Height="40"
-                                      IsChecked="False"
-                                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
-                                      ToolTip="MaterialDesignSwitchLightToggleButton" />
-                    </StackPanel>
-                    <StackPanel Margin="5"
-                                HorizontalAlignment="Center"
-                                Orientation="Horizontal">
-                        <TextBlock Margin="10"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   FontSize="30"
-                                   Foreground="#1b2755"
-                                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                                   Text="冷却室工位" />
-                        <ToggleButton Width="100"
-                                      Height="40"
-                                      IsChecked="False"
-                                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
-                                      ToolTip="MaterialDesignSwitchLightToggleButton" />
-                    </StackPanel>
-                    <StackPanel Margin="5"
-                                HorizontalAlignment="Center"
-                                Orientation="Horizontal">
-                        <TextBlock Margin="10"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   FontSize="30"
-                                   Foreground="#1b2755"
-                                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                                   Text="陶化工位" />
-                        <ToggleButton Width="100"
-                                      Height="40"
-                                      IsChecked="False"
-                                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
-                                      ToolTip="MaterialDesignSwitchLightToggleButton" />
-                    </StackPanel>
-                    <StackPanel Margin="5"
-                                HorizontalAlignment="Center"
-                                Orientation="Horizontal">
-                        <TextBlock Margin="10"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   FontSize="30"
-                                   Foreground="#1b2755"
-                                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                                   Text="固化炉工位" />
-                        <ToggleButton Width="100"
-                                      Height="40"
-                                      IsChecked="False"
-                                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
-                                      ToolTip="MaterialDesignSwitchLightToggleButton" />
-                    </StackPanel>
-                    <StackPanel Margin="5"
-                                HorizontalAlignment="Center"
-                                Orientation="Horizontal">
-                        <TextBlock Margin="10"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   FontSize="30"
-                                   Foreground="#1b2755"
-                                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                                   Text="精洗工位" />
-                        <ToggleButton Width="100"
-                                      Height="40"
-                                      IsChecked="False"
-                                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
-                                      ToolTip="MaterialDesignSwitchLightToggleButton" />
-                    </StackPanel>
-                    <StackPanel Margin="5"
-                                HorizontalAlignment="Center"
-                                Orientation="Horizontal">
-                        <TextBlock Margin="10"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   FontSize="30"
-                                   Foreground="#1b2755"
-                                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                                   Text="输送机工位" />
-                        <ToggleButton Width="100"
-                                      Height="40"
-                                      IsChecked="False"
-                                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
-                                      ToolTip="MaterialDesignSwitchLightToggleButton" />
-                    </StackPanel>
-                </UniformGrid>
-            </Border>
-
             <Border Grid.Column="1"
                     BorderBrush="#50a0ff"
                     BorderThickness="1">

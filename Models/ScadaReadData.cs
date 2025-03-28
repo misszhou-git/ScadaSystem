@@ -216,6 +216,7 @@ public class ScadaReadData:EntityBase
         get => _conveyorInverterRunningStatus;
         set => SetProperty(ref _conveyorInverterRunningStatus, value);
     }
+
     #endregion
 
     #region Alarms（报警状态）
@@ -431,7 +432,7 @@ public class ScadaReadData:EntityBase
 
     private float _phosphatingSprayPumpPressure;
     /// <summary>
-    /// 陶化喷淋泵压力值
+    /// 声音数据
     /// </summary>
     public float PhosphatingSprayPumpPressure
     {
@@ -538,7 +539,7 @@ public class ScadaReadData:EntityBase
         get => _accumulatedAlarms;
         set => SetProperty(ref _accumulatedAlarms, value);
     }
-
-    #endregion
+ 
+    #endregion 
 
 }

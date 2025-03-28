@@ -32,5 +32,10 @@ namespace TulingScadaSystem.Views
         {
             DataContext = App.Current.Services.GetService<IndexViewModel>();
         }
+
+        private void StatusIndicatorControl_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -23,7 +23,9 @@
         <conv:BoolToStringConverter x:Key="BoolToString"
                                     FalseValue="Red"
                                     TrueValue="Green" />
+
     </UserControl.Resources>
+  
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="../Images/bg.png" />
@@ -39,56 +41,6 @@
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-
-        <Border Grid.Row="0"
-                Grid.ColumnSpan="3"
-                BorderBrush="#87ceeb"
-                BorderThickness="0,0,0,1" />
-
-        <!--  温湿度  -->
-        <StackPanel Margin="0,5,0,0" TextElement.FontSize="14">
-            <StackPanel Orientation="Horizontal">
-                <materialDesign:PackIcon Width="20"
-                                         Height="20"
-                                         Margin="0,0,5,0"
-                                         VerticalAlignment="Center"
-                                         Background="Transparent"
-                                         Foreground="White"
-                                         Kind="TemperatureCentigrade" />
-                <TextBlock Margin="0,0,5,0"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           Foreground="White"
-                           Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                           Text="厂房温度:" />
-                <TextBlock HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           Foreground="White"
-                           Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                           Text="25" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <materialDesign:PackIcon Width="20"
-                                         Height="20"
-                                         Margin="0,0,5,0"
-                                         VerticalAlignment="Center"
-                                         Background="Transparent"
-                                         Foreground="White"
-                                         Kind="Humidity" />
-                <TextBlock Margin="0,0,5,0"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           Foreground="White"
-                           Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                           Text="厂房湿度:" />
-                <TextBlock HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           Foreground="White"
-                           Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                           Text="65" />
-            </StackPanel>
-        </StackPanel>
-
         <!--  中央看板文字  -->
         <StackPanel Grid.Row="0" Grid.Column="1">
             <TextBlock Margin="15"
@@ -98,45 +50,10 @@
                        Text="轴向柱塞泵故障诊断实时监控系统" />
         </StackPanel>
 
-        <!--  系统状态  -->
-        <StackPanel Grid.Row="0"
-                    Grid.Column="2"
-                    Margin="0,5,0,0">
-            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                <TextBlock Margin="0,0,5,0"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           Foreground="White"
-                           Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                           Text="系统状态:" />
-                <materialDesign:PackIcon Width="20"
-                                         Height="20"
-                                         Margin="0,0,5,0"
-                                         VerticalAlignment="Center"
-                                         Background="Transparent"
-                                         Foreground="Green"
-                                         Kind="AlarmLight" />
-            </StackPanel>
-            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-                <TextBlock Margin="0,0,5,0"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           Foreground="White"
-                           Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
-                           Text="连接状态:" />
-                <materialDesign:PackIcon Width="20"
-                                         Height="20"
-                                         Margin="0,0,5,0"
-                                         VerticalAlignment="Center"
-                                         Background="Transparent"
-                                         Foreground="Red"
-                                         Kind="Aed" />
-            </StackPanel>
-        </StackPanel>
+        
         <!--  左侧-状态工位  -->
         <Grid Grid.Row="1" Grid.Column="0">
             <Grid.RowDefinitions>
-                <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
@@ -149,28 +66,28 @@
                     <TextBlock HorizontalAlignment="Center"
                                FontSize="20"
                                Text="故障状态" />
-               
-                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp.MoistureFurnaceInverterStatus, Converter={StaticResource BoolToString}}"
-                                                IsIndeterminate="{Binding ScadaReadDataProp.MoistureFurnaceInverterStatus}"
-                                                StatusText="柱塞磨损状态" />
-                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp.MoistureFurnaceAirCurtainStatus, Converter={StaticResource BoolToString}}"
-                                                IsIndeterminate="{Binding ScadaReadDataProp.MoistureFurnaceAirCurtainStatus}"
-                                                StatusText="配流盘磨损状态" />
-                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp.CoolingChamberCentrifugalFanStatus, Converter={StaticResource BoolToString}}"
-                            IsIndeterminate="{Binding ScadaReadDataProp.CoolingChamberCentrifugalFanStatus}"
-                            StatusText="轴承外圈磨损状态" />
-                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp.CuringFurnaceInverterStatus, Converter={StaticResource BoolToString}}"
-        IsIndeterminate="{Binding ScadaReadDataProp.CuringFurnaceInverterStatus}"
-        StatusText="轴承内圈磨损状态" />
-                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp.CuringFurnaceAirCurtainStatus, Converter={StaticResource BoolToString}}"
-IsIndeterminate="{Binding ScadaReadDataProp.CuringFurnaceAirCurtainStatus}"
-StatusText="滚动体磨损状态" />
-                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp.ConveyorInverterPowerStatus, Converter={StaticResource BoolToString}}"
-IsIndeterminate="{Binding ScadaReadDataProp.ConveyorInverterPowerStatus}"
-StatusText="松靴磨损状态" />
-                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp, Converter={StaticResource BoolToString}}"
-                                                IsIndeterminate="{Binding ScadaReadDataProp.FineWashSprayPumpStatus}"
-                                                StatusText="滑靴磨损状态"/>
+
+                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp.MoistureFurnaceBurnerAlarm, Converter={StaticResource BoolToString}}"
+                                                IsIndeterminate="{Binding ScadaReadDataProp.MoistureFurnaceBurnerAlarm}"
+                                                StatusText="柱塞磨损状态" FontSize="20"/>
+                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp.MoistureFurnaceTemperatureAlarm, Converter={StaticResource BoolToString}}"
+                                                IsIndeterminate="{Binding ScadaReadDataProp.MoistureFurnaceTemperatureAlarm}"
+                                                StatusText="配流盘磨损状态" FontSize="20"/>
+                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp.FineWashLowLevelAlarm, Converter={StaticResource BoolToString}}"
+                            IsIndeterminate="{Binding ScadaReadDataProp.FineWashLowLevelAlarm}"
+                            StatusText="轴承外圈磨损状态" FontSize="20"/>
+                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp.FineWashPumpOverloadAlarm, Converter={StaticResource BoolToString}}"
+        IsIndeterminate="{Binding ScadaReadDataProp.FineWashPumpOverloadAlarm}"
+        StatusText="轴承内圈磨损状态" FontSize="20"/>
+                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp.PhosphatingLowLevelAlarm, Converter={StaticResource BoolToString}}"
+IsIndeterminate="{Binding ScadaReadDataProp.PhosphatingLowLevelAlarm}"
+StatusText="滚动体磨损状态" FontSize="20"/>
+                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp.PhosphatingPumpOverloadAlarm, Converter={StaticResource BoolToString}}"
+IsIndeterminate="{Binding ScadaReadDataProp.PhosphatingPumpOverloadAlarm}"
+StatusText="松靴磨损状态" FontSize="20"/>
+                    <ucs:StatusIndicatorControl ButtonBackground="{Binding ScadaReadDataProp.RoughWashLowLevelAlarm, Converter={StaticResource BoolToString}}"
+                                                IsIndeterminate="{Binding ScadaReadDataProp.RoughWashLowLevelAlarm}"
+                                                StatusText="滑靴磨损状态" FontSize="20"/>
                 </StackPanel>
             </Border>
         </Grid>
@@ -178,7 +95,6 @@ StatusText="松靴磨损状态" />
         <!--  右侧-状态工位  -->
         <Grid Grid.Row="1" Grid.Column="2">
             <Grid.RowDefinitions>
-                <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
@@ -189,21 +105,47 @@ StatusText="松靴磨损状态" />
                 <StackPanel TextElement.Foreground="White">
                     <TextBlock HorizontalAlignment="Center"
                                FontSize="20"
-                               Text="水分炉工位" />
-                    <ucs:StatusIndicatorControl ButtonBackground="Green"
-                                                IsIndeterminate="True"
-                                                StatusText="水分炉变频器运行状态" />
-                    <ucs:StatusIndicatorControl ButtonBackground="Red"
-                                                IsIndeterminate="False"
-                                                StatusText="水分炉风机运行状态" />
-                    <ucs:StatusIndicatorControl ButtonBackground="Red"
-                                                IsIndeterminate="False"
-                                                StatusText="水分炉温度报警" />
-                    <ucs:StatusIndicatorControl ButtonBackground="Red"
-                                                IsIndeterminate="False"
-                                                StatusText="水分炉煤气泄露报警" />
+                               Text="系统状态" />
+                    <!--  系统状态  -->
+                    <StackPanel Grid.Row="0"
+            Grid.Column="2"
+            Margin="10">
+                        <StackPanel  Orientation="Horizontal">
+                            <materialDesign:PackIcon Width="20"
+      Height="20"
+      Margin="10"
+      VerticalAlignment="Center"
+      Background="Transparent"
+      Foreground="Green"
+      Kind="AlarmLight" />
+                            <TextBlock Margin="0,0,5,0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="White"
+                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
+                   Text="系统状态" FontSize="20"/>
+                           
+                        </StackPanel>
+                        <StackPanel  Orientation="Horizontal">
+                            <materialDesign:PackIcon
+      Height="20"
+      Margin="10"
+      VerticalAlignment="Center"
+      Background="Transparent"
+      Foreground="Red"
+      Kind="Aed" />
+                            <TextBlock Margin="0,0,5,0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="White"
+                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
+                   Text="连接状态" FontSize="20"/>
+                           
+                        </StackPanel>
+                    </StackPanel>
                 </StackPanel>
             </Border>
+
             <Border Grid.Row="2"
                     Margin="2,5,0,0"
                     BorderBrush="#87ceeb"
@@ -211,49 +153,51 @@ StatusText="松靴磨损状态" />
                 <StackPanel TextElement.Foreground="White">
                     <TextBlock HorizontalAlignment="Center"
                                FontSize="20"
-                               Text="参数监控" />
-                    <UniformGrid>
-                        <StackPanel Margin="0,0,5,0">
-                            <Button Height="50"
-                                    materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
-                                    ToolTip="MaterialDesignRaisedAccentButton with Round Top Corners">
-                                <TextBlock Text="{Binding ScadaReadDataProp.DegreasingSprayPumpPressure}" />
-                            </Button>
-                            <TextBlock HorizontalAlignment="Center" Text="X轴振动数据" />
+                               Text="厂房环境" />
+                    <!--  温湿度  -->
+                    <StackPanel Margin="0,5,0,0" TextElement.FontSize="20">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Width="20"
+                                 Height="20"
+                                 Margin="10"
+                                 VerticalAlignment="Center"
+                                 Background="Transparent"
+                                 Foreground="White"
+                                 Kind="TemperatureCentigrade" />
+                            <TextBlock Margin="0,0,5,0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="White"
+                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
+                   Text="厂房温度:" 
+                                       FontSize="20"/>
+                            <TextBlock HorizontalAlignment="Center" FontSize="20"
+                   VerticalAlignment="Center"
+                   Foreground="White"
+                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
+                   Text="25" />
                         </StackPanel>
-                        <StackPanel Margin="0,0,5,0">
-                            <Button Height="50"
-                                    materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
-                                    ToolTip="MaterialDesignRaisedAccentButton with Round Top Corners">
-                                <TextBlock Text="{Binding ScadaReadDataProp.DegreasingPhValue}" />
-                            </Button>
-                            <TextBlock HorizontalAlignment="Center" Text="Y轴振动数据" />
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Width="20"
+                                 Height="20"
+                                 Margin="10"
+                                 VerticalAlignment="Center"
+                                 Background="Transparent"
+                                 Foreground="White"
+                                 Kind="Humidity" />
+                            <TextBlock Margin="0,0,5,0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="White"
+                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
+                   Text="厂房湿度:" FontSize="20"/>
+                            <TextBlock HorizontalAlignment="Center" FontSize="20"
+                   VerticalAlignment="Center"
+                   Foreground="White"
+                   Style="{StaticResource MaterialDesignTitleSmallTextBlock}"
+                   Text="65" />
                         </StackPanel>
-                        <StackPanel Margin="0,0,5,0">
-                            <Button Height="50"
-                                    materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
-                                    ToolTip="MaterialDesignRaisedAccentButton with Round Top Corners">
-                                <TextBlock Text="{Binding ScadaReadDataProp.RoughWashSprayPumpPressure}" />
-                            </Button>
-                            <TextBlock HorizontalAlignment="Center" Text="Z轴振动数据" />
-                        </StackPanel>
-                        <StackPanel Margin="0,0,5,0">
-                            <Button Height="50"
-                                    materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
-                                    ToolTip="MaterialDesignRaisedAccentButton with Round Top Corners">
-                                <TextBlock Text="{Binding ScadaReadDataProp.PhosphatingSprayPumpPressure}" />
-                            </Button>
-                            <TextBlock HorizontalAlignment="Center" Text="声音数据" />
-                        </StackPanel>
-                        <StackPanel Margin="0,0,5,0">
-                            <Button Height="50"
-                                    materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
-                                    ToolTip="MaterialDesignRaisedAccentButton with Round Top Corners">
-                                <TextBlock Text="{Binding ScadaReadDataProp.PhosphatingPhValue}" />
-                            </Button>
-                            <TextBlock HorizontalAlignment="Center" Text="压力数据" />
-                        </StackPanel>
-                    </UniformGrid>
+                    </StackPanel>
                 </StackPanel>
             </Border>
 
@@ -263,6 +207,7 @@ StatusText="松靴磨损状态" />
         <Grid Grid.Row="1" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
+                <RowDefinition Height="2*" />
                 <RowDefinition Height="1.1*" />
             </Grid.RowDefinitions>
 
@@ -326,6 +271,58 @@ StatusText="松靴磨损状态" />
                         </StackPanel>
                     </Border>
                 </Grid>
+            </Border>
+            <Border Grid.Row="2"
+         Margin="2,5,0,0"
+         BorderBrush="#87ceeb"
+         BorderThickness="1">
+                <StackPanel TextElement.Foreground="White">
+                    <TextBlock HorizontalAlignment="Center"
+                    FontSize="20"
+                    Text="参数监控" />
+                    <UniformGrid>
+                        <StackPanel Margin="0,0,5,0">
+                            <Button Height="50"
+                         materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
+                         ToolTip="MaterialDesignRaisedAccentButton with Round Top Corners">
+                                <TextBlock Text="{Binding ScadaReadDataProp.DegreasingSprayPumpPressure}" />
+                            </Button>
+                            <TextBlock HorizontalAlignment="Center" Text="X轴振动数据" FontSize="20" Margin="0,0,0,10"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,0,5,0">
+                            <Button Height="50"
+                         materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
+                         ToolTip="MaterialDesignRaisedAccentButton with Round Top Corners">
+                                <TextBlock Text="{Binding ScadaReadDataProp.DegreasingPhValue}" />
+                            </Button>
+                            <TextBlock HorizontalAlignment="Center" Text="Y轴振动数据" FontSize="20" Margin="0,0,0,10"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,0,5,0">
+                            <Button Height="50"
+                         materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
+                         ToolTip="MaterialDesignRaisedAccentButton with Round Top Corners">
+                                <TextBlock Text="{Binding ScadaReadDataProp.RoughWashSprayPumpPressure}" />
+                            </Button>
+                            <TextBlock HorizontalAlignment="Center" Text="Z轴振动数据" FontSize="20" Margin="0,0,0,10"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,0,5,0">
+                            <Button Height="50"
+                         materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
+                         ToolTip="MaterialDesignRaisedAccentButton with Round Top Corners">
+                                <TextBlock Text="{Binding ScadaReadDataProp.PhosphatingSprayPumpPressure}" />
+                            </Button>
+                            <TextBlock HorizontalAlignment="Center" Text="声音数据" FontSize="20" Margin="0,0,0,10"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,0,5,0">
+                            <Button Height="50"
+                         materialDesign:ButtonAssist.CornerRadius="25 25 0 0"
+                         ToolTip="MaterialDesignRaisedAccentButton with Round Top Corners">
+                                <TextBlock Text="{Binding ScadaReadDataProp.PhosphatingPhValue}" /> 
+                            </Button>
+                            <TextBlock HorizontalAlignment="Center" Text="压力数据" FontSize="20" Margin="0,0,0,10"/>
+                        </StackPanel>
+                    </UniformGrid>
+                </StackPanel>
             </Border>
             <Border Grid.Row="1"
                     Margin="2,5,0,0"

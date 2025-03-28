@@ -61,10 +61,10 @@
     <None Update="Configs\report.frx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Configs\TulingRead.xlsx">
+    <None Update="Configs\Read.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Configs\TulingWrite.xlsx">
+    <None Update="Configs\Write.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

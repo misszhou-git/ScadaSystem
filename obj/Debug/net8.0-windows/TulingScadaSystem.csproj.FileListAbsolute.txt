@@ -609,8 +609,6 @@ D:\3.WPF\ScadaSystem\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2
 D:\3.WPF\ScadaSystem\bin\Debug\net8.0-windows\TulingScadaSystem.exe
 D:\3.WPF\ScadaSystem\bin\Debug\net8.0-windows\Configs\appsettings.json
 D:\3.WPF\ScadaSystem\bin\Debug\net8.0-windows\Configs\report.frx
-D:\3.WPF\ScadaSystem\bin\Debug\net8.0-windows\Configs\TulingRead.xlsx
-D:\3.WPF\ScadaSystem\bin\Debug\net8.0-windows\Configs\TulingWrite.xlsx
 D:\3.WPF\ScadaSystem\bin\Debug\net8.0-windows\TulingScadaSystem.deps.json
 D:\3.WPF\ScadaSystem\bin\Debug\net8.0-windows\TulingScadaSystem.runtimeconfig.json
 D:\3.WPF\ScadaSystem\bin\Debug\net8.0-windows\TulingScadaSystem.dll
@@ -866,3 +864,5 @@ D:\3.WPF\ScadaSystem\obj\Debug\net8.0-windows\TulingScadaSystem.sourcelink.json
 D:\3.WPF\ScadaSystem\obj\Debug\net8.0-windows\TulingSc.6F15144A.Up2Date
 D:\3.WPF\ScadaSystem\obj\Debug\net8.0-windows\TulingScadaSystem.genruntimeconfig.cache
 D:\3.WPF\ScadaSystem\obj\Debug\net8.0-windows\ref\TulingScadaSystem.dll
+D:\3.WPF\ScadaSystem\bin\Debug\net8.0-windows\Configs\Read.xlsx
+D:\3.WPF\ScadaSystem\bin\Debug\net8.0-windows\Configs\Write.xlsx

@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Windows.Controls;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.Options;
 using TulingScadaSystem.Helpers;
@@ -13,6 +14,7 @@ public partial class ParamsViewModel:ObservableObject
 
     [ObservableProperty]
     RootParam _rootParamProp;
+
 
     public ParamsViewModel(IOptionsSnapshot<RootParam> optionsSnapshot, GlobalConfig globalConfig)
     {
@@ -46,6 +48,17 @@ public partial class ParamsViewModel:ObservableObject
             StopMockData();
         }
     }
+    [RelayCommand]
+    //调整压力参数
+    //private void myComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    //{
+    //    var selectedItem = myComboBox.SelectedItem; // 确保类型转换正确。如果使用字符串，则不需要转换。
+    //    if (selectedItem != null)
+    //    {
+    //        RootParamProp.PlcParam.PressValue = selectedItem.ToString();
+    //    }
+
+    //}
 
     private void StopMockData()
     {

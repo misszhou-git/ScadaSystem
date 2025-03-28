@@ -90,13 +90,11 @@
             <ListView.View>
                 <GridView ColumnHeaderContainerStyle="{StaticResource LeftAlignedHeaderStyle}">
                     <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="序号" />
-                    <GridViewColumn DisplayMemberBinding="{Binding DegreasingSprayPumpPressure}" Header="脱脂压力值" />
-                    <GridViewColumn DisplayMemberBinding="{Binding DegreasingPhValue}" Header="脱脂pH值" />
-                    <GridViewColumn DisplayMemberBinding="{Binding RoughWashSprayPumpPressure}" Header="粗洗压力值" />
-                    <GridViewColumn DisplayMemberBinding="{Binding PhosphatingSprayPumpPressure}" Header="陶化压力值" />
-                    <GridViewColumn DisplayMemberBinding="{Binding PhosphatingPhValue}" Header="陶化pH值" />
-                    <GridViewColumn DisplayMemberBinding="{Binding MoistureFurnaceTemperature}" Header="水分炉温度" />
-                    <GridViewColumn DisplayMemberBinding="{Binding CuringFurnaceTemperature}" Header="固化炉温度" />
+                    <GridViewColumn DisplayMemberBinding="{Binding DegreasingSprayPumpPressure}" Header="X轴振动数据" />
+                    <GridViewColumn DisplayMemberBinding="{Binding DegreasingPhValue}" Header="Y轴振动数据" />
+                    <GridViewColumn DisplayMemberBinding="{Binding RoughWashSprayPumpPressure}" Header="Z轴振动数据" />
+                    <GridViewColumn DisplayMemberBinding="{Binding PhosphatingSprayPumpPressure}" Header="声音数据" />
+                    <GridViewColumn DisplayMemberBinding="{Binding PhosphatingPhValue}" Header="压力数据" />
                     <GridViewColumn DisplayMemberBinding="{Binding FactoryTemperature}" Header="厂内温度" />
                     <GridViewColumn DisplayMemberBinding="{Binding FactoryHumidity}" Header="厂内湿度" />
                     <GridViewColumn DisplayMemberBinding="{Binding CreateTime}" Header="创建时间" />

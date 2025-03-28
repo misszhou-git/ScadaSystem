@@ -31,11 +31,9 @@ namespace TulingScadaSystem.Views
         private void InitData()
         {
             DataContext = App.Current.Services.GetService<DeviceViewModel>();
+          // DataContext = App.Current.Services.GetService<ParamsViewModel>();
+          
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
     }
 }

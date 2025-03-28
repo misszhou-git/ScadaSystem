@@ -69,6 +69,7 @@ public class PlcParam
     /// Plc 模拟数据
     /// </summary>
     public bool AutoMock { get; set; }
+    public string PressValue { get; internal set; }
 }
 
 public class SystemParam

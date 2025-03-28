@@ -122,6 +122,7 @@
                         </ToggleButton>
                     </StackPanel>
                 </StackPanel>
+               
             </StackPanel>
         </Border>
 
@@ -130,57 +131,14 @@
                 BorderThickness="1">
             <StackPanel>
                 <Button Content="压力参数" Style="{DynamicResource TulingButtonStyle}" />
-                <StackPanel Orientation="Horizontal">
-                    <StackPanel Margin="10" Orientation="Horizontal">
-                        <Label Width="80"
-                               Margin="5"
-                               Content="当前压力：" />
-                        <TextBox Width="420"
-                                 Margin="5"
-                                 Text="{Binding RootParamProp.SystemParam.AuthCode}"
-                                 TextAlignment="Center" />
-                    </StackPanel>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <StackPanel Margin="10" Orientation="Horizontal">
-                        <Label Width="80"
-                               Margin="5"
-                               Content="5Mpa：" />
-                        <ToggleButton Width="80"
-                                      Margin="5"
-                                      IsChecked="{Binding RootParamProp.SystemParam.AutoClearLog, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                      Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
-                                      ToolTip="自动采集开关" />
-                    </StackPanel>
-                    <StackPanel Margin="10" Orientation="Horizontal">
-                        <Label Width="80"
-                            Margin="5"
-                                Content="10Mpa：" />
-                        <ToggleButton Width="80"
-                  Margin="5"
-                  IsChecked="{Binding RootParamProp.SystemParam.AutoClearLog, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                  Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
-                  ToolTip="自动采集开关" />
-                    </StackPanel>
-                    <StackPanel Margin="10" Orientation="Horizontal">
-                        <Label Width="80"
-           Margin="5"
-           Content="15Mpa：" />
-                        <ToggleButton Width="80"
-                  Margin="5"
-                  IsChecked="{Binding RootParamProp.SystemParam.AutoClearLog, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                  Style="{StaticResource MaterialDesignSwitchLightToggleButton}"
-                  ToolTip="自动采集开关" />
-                    </StackPanel>
-                    <!--<StackPanel Margin="10" Orientation="Horizontal">
-                        <Label Width="80"
-                               Margin="5"
-                               Content="清除天数：" />
-                        <TextBox Width="150"
-                                 Margin="5"
-                                 Text="{Binding RootParamProp.SystemParam.AutoClearDay}"
-                                 TextAlignment="Center" />
-                    </StackPanel>-->
+                <StackPanel Margin="10" Orientation="Horizontal">
+                    <Label Width="80"  Margin="5" Content="压力设置：" />
+                    <ComboBox x:Name="myComboBox" HorizontalAlignment="Left" Margin="10" Width="160" SelectedIndex="0">
+                        <!-- 这里可以添加动态的选项或者绑定数据 -->
+                        <ComboBoxItem>5Mpa</ComboBoxItem>
+                        <ComboBoxItem>10Mpa</ComboBoxItem>
+                        <ComboBoxItem>15Mpa</ComboBoxItem>
+                    </ComboBox>
                 </StackPanel>
             </StackPanel>
         </Border>

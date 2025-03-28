@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TulingScadaSystem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f757c28694ecb2c914ed587633ebbe03abc6888b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce0d7093a6c756c41281d797e68690ca397abd5a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TulingScadaSystem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TulingScadaSystem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
